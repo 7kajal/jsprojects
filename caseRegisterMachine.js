@@ -4,7 +4,7 @@ const cashRegister = {
             {Name :"Smart Tv" , Price :220 },
             {Name :"Gaming Console" , Price :150 },
  ],
- shoppingCart : [],
+ shoppingCart : [], 
 
 addItem: function (Name) {
     let itemFound = false;
@@ -15,7 +15,7 @@ addItem: function (Name) {
             console.log(`${this.itemsForSale[i].Name}  $${this.itemsForSale[i].Price} added to shopping cart.`)//$$ - one for price sign and second for access variable.
         }
     }
-    if(!itemFound){
+    if(!itemFound){   
         console.log("Not sell this items.")
     }
 },
