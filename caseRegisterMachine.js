@@ -8,13 +8,13 @@ const cashRegister = {
 
 addItem: function (Name) {
     let itemFound = false;
-    for(i in this.itemsForSale){
-        if (this.itemsForSale[i].Name == Name){
-            this.shoppingCart.push(this.itemsForSale[i]);
+    this.itemsForSale.map(item =>{
+        if (item.Name == Name){
+            this.shoppingCart.push(item);
             itemFound = true;
-            console.log(`${this.itemsForSale[i].Name}  $${this.itemsForSale[i].Price} added to shopping cart.`)//$$ - one for price sign and second for access variable.
+            console.log(`${item.Name}  $${item.Price} added to shopping cart.`)//$$ - one for price sign and second for access variable.
         }
-    }
+    })
     if(!itemFound){   
         console.log("Not sell this items.")
     }
