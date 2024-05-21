@@ -32,7 +32,7 @@ pay: function(paymentAmount){
 
     }
     if(paymentAmount == totalPrice){
-        console.log("Thanks for shopping with us.")
+        console.log("Thank you for shopping with us.")
     }
     else if(paymentAmount > totalPrice){
         console.log(`Thanks for shopping with us,and here is your remaining amount: $${(paymentAmount - totalPrice)}`);
