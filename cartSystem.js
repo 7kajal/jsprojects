@@ -12,9 +12,9 @@ const products =[
 const cart = [ ];
 
 const addToCart = (Name, Category) =>{
-  const filteredProducts =  products.filter(product => product.Category === Category);
+  const filteredProduct =  products.filter(product => product.Category === Category);
   let productFound = false;
-  filteredProducts.forEach(product => { 
+  filteredProduct.forEach(product => { 
     if(product.Name === Name) {
         productFound = true ;
         if(product.Stock > 0){
