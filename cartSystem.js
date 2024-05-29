@@ -43,7 +43,7 @@ addToCart("productP" , "category4");
 
 const calculateTotalPrice = () => {
     if (cart.length !== 0) {
-      let totalPrice = cart.reduce((accumalator, curentValue) => accumalator + curentValue.Price, 0,);
+      let totalPrice = cart.reduce((accumalator, curentValue) => accumalator + curentValue.Price, 0);
       if (totalPrice >= 500) {
         const discount = (totalPrice / 100) * 15;
         totalPrice -= discount;
