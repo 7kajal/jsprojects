@@ -1,4 +1,4 @@
-let taskList  = [];
+let taskList  = []; 
 
 const addTask = (taskName,priorityLevel,deadline) =>{
       let task ={
@@ -74,16 +74,13 @@ const listTask = () =>
 
 listTask()
 console.log(taskList);
-//Dom
 
-const container = document.querySelector(".container");
+//Using DOM
 const texts = document.querySelector("#taskname");
 const btn =document.querySelector("#btn");
 const priority = document.querySelector("#priority");
 const deadline = document.querySelector("#deadline");
 const storeTask = document.querySelector("#sectionStore");
-
-
 
 btn.addEventListener("click",btnFunc);
 
@@ -116,9 +113,25 @@ function btnFunc(){
 
     }
 
+    const complete = document.createElement("button");
+    complete.textContent = "Mark As Completed";
+
+    complete.addEventListener("click", completeFunc)
+
+    function completeFunc(){
+        const para = document.createElement("p")
+        para.textContent ="Your Task Completed.";
+
+        sectionStore.removeChild(complete);
+        createDiv.append(para)
+
+    }
+
     createDiv.append(store);
-    createDiv.append(del);
     createDiv.append(priorityLevelValue);
     createDiv.append(deadlineValue);
-    storeTask.append(createDiv)
+    createDiv.append(del);
+    sectionStore.append(createDiv);
+    sectionStore.append(complete);
+    console.log(storeTask);
 }
