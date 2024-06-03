@@ -12,8 +12,8 @@ async function getUsers() {
 
 
 async function ecommerce ()  {
-    const users = await getUsers();
     const products = await getProducts();
+    const users = await getUsers();
 
      function login(email, password) {
         let userFound = false ;
@@ -22,7 +22,6 @@ async function ecommerce ()  {
             userFound = true ;
             if(users[i].password == password){
                 return true;
-                
             }
             else{
                 return false;
@@ -38,7 +37,7 @@ async function ecommerce ()  {
 
     async function addToCart (email ,password, title, category){
         const filteredProduct = products.filter(product =>product.category === category );
-        const userFound=  await login(email, password);
+        const userFound = await login(email, password);
         //console.log(filteredProduct)
 
         if(!userFound){
