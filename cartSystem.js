@@ -64,7 +64,7 @@ const makePyment = (paymentAmount) => {
       console.log(`Total Price is:  $${totalPrice}`);
       console.log("Thanks for shopping with us.")
     }
-     if(paymentAmount > totalPrice){
+    if(paymentAmount > totalPrice){
         console.log(`Here is your remaining amount: $${paymentAmount - totalPrice}`,);
     }
     else{
