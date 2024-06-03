@@ -74,6 +74,7 @@ async function ecommerce ()  {
      function calculateTotalPrice(){
         if(cart.length !== 0){
             let totalPrice = cart.reduce((accumulator ,currentValue) => accumulator + currentValue.price ,0 );
+            console.log(`Total Price is : ${totalPrice}`)
             if(totalPrice > 500){
                 const discount = (totalPrice /100) * 15 ;
                 totalPrice -= discount ;
@@ -91,7 +92,6 @@ async function ecommerce ()  {
     async function makePyment (paymentAmount){
        const totalPrice =  await calculateTotalPrice();
         if(paymentAmount >= totalPrice){
-            console.log(`Total Price is: $${totalPrice}`);
             console.log("Thanks for shopping with use.")
         }
         if(paymentAmount >  totalPrice){
