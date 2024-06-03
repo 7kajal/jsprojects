@@ -92,6 +92,7 @@ async function ecommerce ()  {
     async function makePyment (paymentAmount){
        const totalPrice =  await calculateTotalPrice();
         if(paymentAmount >= totalPrice){
+            console.log(`Total Price after discount Percent : $${totalPrice}`);
             console.log("Thanks for shopping with use.")
         }
         if(paymentAmount >  totalPrice){
