@@ -54,11 +54,10 @@ const taskToDoFirst =() => {
 taskToDoFirst();
 
 
- filterTask =(deadline ,priorityLevel) =>{
-        const taskfiltered = taskList.filter((task) =>task.deadline === deadline && task.priorityLevel === priorityLevel);
-        console.log(" Task which has deadline today and priority Level is High : ")
-        console.log( taskfiltered);
-        
+filterTask =(deadline ,priorityLevel) =>{
+    const taskfiltered = taskList.filter((task) =>task.deadline === deadline && task.priorityLevel === priorityLevel);
+    console.log(" Task which has deadline today and priority Level is High : ")
+    console.log( taskfiltered);
 }
 
 const taskForToday = () =>{
