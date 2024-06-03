@@ -15,10 +15,8 @@ addItem: function (Name) {
             console.log(`${item.Name}  $${item.Price} added to shopping cart.`)//$$ - one for price sign and second for access variable.
         }
     })
-    if(!itemFound){   {
-
-    }
-        console.log("Not sell this items.")
+    if(!itemFound){   
+    console.log("Not sell this items.");
     }
 },
 calculateTotalPrice: function() {
@@ -52,7 +50,6 @@ const totalPrice = cashRegister.calculateTotalPrice();
 console.log(`Total Price is :${totalPrice}`);
 
 cashRegister.pay(500);
-cashRegister.pay(200); 
 
 
 
